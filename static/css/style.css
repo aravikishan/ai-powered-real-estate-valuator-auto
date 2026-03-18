@@ -1,0 +1,130 @@
+:root {
+    --primary-color: #0044cc;
+    --secondary-color: #00cc88;
+    --background-color: #f8f9fa;
+    --text-color: #333333;
+    --card-bg-color: #ffffff;
+    --card-border-color: #dddddd;
+    --transition-speed: 0.3s;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color var(--transition-speed);
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    padding: 20px 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid var(--card-border-color);
+    text-align: left;
+}
+
+.table th {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    transition: transform var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+form {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form .form-control {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--card-border-color);
+    border-radius: 5px;
+}
+
+form .btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+
+form .btn:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
